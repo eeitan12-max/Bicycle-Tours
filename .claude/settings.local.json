@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf \"c:/Users/amitr/Bikes/Bicycle-Tours/node_modules\")",
+      "Bash(rm \"c:/Users/amitr/Bikes/Bicycle-Tours/package.json\")",
+      "Bash(rm \"c:/Users/amitr/Bikes/Bicycle-Tours/package-lock.json\")"
+    ]
+  }
+}
