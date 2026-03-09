@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VeloEurope — Guided Bicycle Tours</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#">Velo<span>Europe</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul id="nav-menu">
+    <li><a href="#tours"        ><i class="fas fa-route"></i> <span data-i18n="nav-tours">Tours</span></a></li>
+    <li><a href="#why"          ><i class="fas fa-star"></i> <span data-i18n="nav-why">Why Us</span></a></li>
+    <li><a href="#how"          ><i class="fas fa-list-ol"></i> <span data-i18n="nav-how">How It Works</span></a></li>
+    <li><a href="#testimonials" ><i class="fas fa-comments"></i> <span data-i18n="nav-reviews">Reviews</span></a></li>
+    <li><a class="nav-cta" href="#tours"><i class="fas fa-calendar-check"></i> <span data-i18n="nav-book">Book a Tour</span></a></li>
+  </ul>
+  <div class="lang-switcher">
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" data-lang="he" onclick="setLang('he')">עב</button>
+    <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-badge" data-i18n="hero-badge">🚴 Europe's #1 Guided Cycling Experience</div>
+    <h1 data-i18n-html="hero-h1">Ride Through<br><em>Europe's Best</em><br>Landscapes</h1>
+    <p data-i18n="hero-p">Expert-guided bicycle tours through scenic routes, charming villages, and iconic destinations — no car needed.</p>
+    <div class="btn-group">
+      <a href="#tours" class="btn-primary" data-i18n="btn-explore">Explore Tours</a>
+      <a href="#how"   class="btn-outline" data-i18n="btn-how">How It Works</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">48+</div><div class="stat-label" data-i18n="stat-routes">Routes</div></div>
+      <div class="stat"><div class="stat-num">12K+</div><div class="stat-label" data-i18n="stat-cyclists">Happy Cyclists</div></div>
+      <div class="stat"><div class="stat-num">18</div><div class="stat-label" data-i18n="stat-countries">Countries</div></div>
+      <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label" data-i18n="stat-rating">Avg Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section id="tours">
+  <div class="container">
+    <p class="section-label" data-i18n="label-tours">Our Routes</p>
+    <h2 class="section-title" data-i18n="title-tours">Find Your Perfect Tour</h2>
+    <p class="section-sub"   data-i18n="sub-tours">From leisurely countryside rides to epic alpine challenges — a tour for every level.</p>
+
+    <div class="tours-grid">
+
+      <a class="card" href="tours/tour-loire.html">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=600&q=80')"></div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-easy" data-i18n="tag-easy">Easy</span>
+            <span class="tag tag-days">7 Days</span>
+          </div>
+          <h3>Loire Valley, France</h3>
+          <div class="card-route">Tours → Saumur → Angers</div>
+          <p class="card-desc">Pedal past fairy-tale châteaux, sun-drenched vineyards, and flower-lined riverbanks along the UNESCO-listed Loire.</p>
+          <div class="card-footer">
+            <div class="price">€1,290 <span>/ person</span></div>
+            <span class="btn-book" data-i18n="btn-view-tour">View Tour →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="tours/tour-danube.html">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?w=600&q=80')"></div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-mod" data-i18n="tag-mod">Moderate</span>
+            <span class="tag tag-days">10 Days</span>
+          </div>
+          <h3>Danube Cycle Path</h3>
+          <div class="card-route">Passau, Germany → Vienna, Austria</div>
+          <p class="card-desc">Follow Europe's mightiest river through medieval towns, baroque abbeys, and the grand finale of Vienna.</p>
+          <div class="card-footer">
+            <div class="price">€1,790 <span>/ person</span></div>
+            <span class="btn-book" data-i18n="btn-view-tour">View Tour →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="tours/tour-pyrenees.html">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1520901374099-7cd24285fd15?w=600&q=80')"></div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-hard" data-i18n="tag-hard">Challenging</span>
+            <span class="tag tag-days">14 Days</span>
+          </div>
+          <h3>Pyrenees Crossing</h3>
+          <div class="card-route">Biarritz, France → Barcelona, Spain</div>
+          <p class="card-desc">Conquer legendary cols, descend into Catalonia, and finish with tapas on the shores of the Mediterranean.</p>
+          <div class="card-footer">
+            <div class="price">€2,490 <span>/ person</span></div>
+            <span class="btn-book" data-i18n="btn-view-tour">View Tour →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="tours/tour-dutch.html">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80')"></div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-easy" data-i18n="tag-easy">Easy</span>
+            <span class="tag tag-days">5 Days</span>
+          </div>
+          <h3>Dutch Countryside</h3>
+          <div class="card-route">Amsterdam → Rotterdam</div>
+          <p class="card-desc">Windmills, tulip fields, and cycling-paradise infrastructure make the Netherlands a dream destination for two wheels.</p>
+          <div class="card-footer">
+            <div class="price">€890 <span>/ person</span></div>
+            <span class="btn-book" data-i18n="btn-view-tour">View Tour →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="tours/tour-tuscany.html">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=80')"></div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-mod" data-i18n="tag-mod">Moderate</span>
+            <span class="tag tag-days">8 Days</span>
+          </div>
+          <h3>Tuscany, Italy</h3>
+          <div class="card-route">Florence → Siena → Pienza</div>
+          <p class="card-desc">Rolling cypress-lined hills, ancient hilltop towns, world-class wine — Tuscany is cycling poetry.</p>
+          <div class="card-footer">
+            <div class="price">€1,590 <span>/ person</span></div>
+            <span class="btn-book" data-i18n="btn-view-tour">View Tour →</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="tours/tour-dolomites.html">
+        <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1599854960648-49b7b9b96688?w=600&q=80')"></div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag tag-hard" data-i18n="tag-hard">Challenging</span>
+            <span class="tag tag-days">12 Days</span>
+          </div>
+          <h3>Dolomites, Italy</h3>
+          <div class="card-route">Innsbruck, Austria → Venice, Italy</div>
+          <p class="card-desc">Dramatic peaks, vertiginous passes, and a gondola ride at the finish — cycling doesn't get more spectacular.</p>
+          <div class="card-footer">
+            <div class="price">€2,190 <span>/ person</span></div>
+            <span class="btn-book" data-i18n="btn-view-tour">View Tour →</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="container">
+    <p class="section-label" data-i18n="label-why">Why VeloEurope</p>
+    <h2 class="section-title" data-i18n-html="title-why">Everything Handled.<br>You Just Pedal.</h2>
+    <p class="section-sub"   data-i18n="sub-why">We take care of every detail so you can focus on the scenery, the food, and the ride.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🗺️</div>
+        <h3 data-i18n="why-1-title">Expert Local Guides</h3>
+        <p  data-i18n="why-1-p">Passionate cyclists who know every back road, hidden village, and best café on the route.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚲</div>
+        <h3 data-i18n="why-2-title">Premium E-Bikes & Road Bikes</h3>
+        <p  data-i18n="why-2-p">Top-quality Shimano-equipped bikes fitted to your size, with e-assist options available.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏨</div>
+        <h3 data-i18n="why-3-title">Hand-Picked Accommodation</h3>
+        <p  data-i18n="why-3-p">Charming guesthouses, boutique hotels, and family-run auberges — never a chain.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🍷</div>
+        <h3 data-i18n="why-4-title">Authentic Cuisine</h3>
+        <p  data-i18n="why-4-p">Locally sourced breakfasts, picnic lunches, and restaurant dinners celebrating regional flavours.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚐</div>
+        <h3 data-i18n="why-5-title">Luggage Transfer</h3>
+        <p  data-i18n="why-5-p">Your bags move to the next hotel while you ride light — only carry a daypack.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📞</div>
+        <h3 data-i18n="why-6-title">24/7 Support</h3>
+        <p  data-i18n="why-6-p">A real person on the line whenever you need it, from booking to the final day of your tour.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <p class="section-label" data-i18n="label-how">Getting Started</p>
+    <h2 class="section-title" style="color:#fff" data-i18n="title-how">How It Works</h2>
+    <p class="section-sub"   data-i18n="sub-how">Four simple steps from browsing to riding.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3 data-i18n="step-1-title">Choose Your Route</h3>
+        <p  data-i18n="step-1-p">Browse 48+ tours by difficulty, duration, country, or style — self-guided or fully guided.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3 data-i18n="step-2-title">Customise & Book</h3>
+        <p  data-i18n="step-2-p">Select your dates, add e-bike upgrade, solo or group option. Secure your spot with a 20% deposit.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3 data-i18n="step-3-title">We Handle the Rest</h3>
+        <p  data-i18n="step-3-p">Receive your personalised route book, hotel vouchers, and emergency contacts two weeks before departure.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3 data-i18n="step-4-title">Ride & Enjoy</h3>
+        <p  data-i18n="step-4-p">Show up and pedal. Our guides, support van, and care team keep everything running smoothly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <p class="section-label" data-i18n="label-reviews">Reviews</p>
+    <h2 class="section-title" data-i18n="title-reviews">What Our Cyclists Say</h2>
+    <p class="section-sub"   data-i18n="sub-reviews">Over 12,000 riders have trusted VeloEurope. Here's a few of their stories.</p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"The Loire Valley tour was absolutely magical. The guides knew every hidden château and the food was incredible. Already booked our second trip!"</p>
+        <div class="reviewer">
+          <div class="avatar">SJ</div>
+          <div class="reviewer-info">
+            <strong>Sarah J.</strong>
+            <span>London, UK — Loire Valley tour</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Did the Danube path as a couple with zero cycling experience. The e-bike option was a game-changer and the hotels were charming every single night."</p>
+        <div class="reviewer">
+          <div class="avatar">MK</div>
+          <div class="reviewer-info">
+            <strong>Marcus K.</strong>
+            <span>Toronto, Canada — Danube tour</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Pyrenees Crossing was the hardest thing I've ever done and the best. Support van, professional guides, incredible views. Worth every euro."</p>
+        <div class="reviewer">
+          <div class="avatar">AL</div>
+          <div class="reviewer-info">
+            <strong>Anna L.</strong>
+            <span>Sydney, Australia — Pyrenees tour</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h2 data-i18n="cta-h2">Ready to Saddle Up?</h2>
+  <p  data-i18n="cta-p">Join thousands of cyclists discovering Europe one pedal stroke at a time. Limited spaces per departure.</p>
+  <a href="#tours" class="btn-primary" data-i18n="cta-btn">View All Tours</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-logo" href="#">Velo<span>Europe</span></a>
+  <nav>
+    <ul>
+      <li><a href="#tours"        data-i18n="nav-tours">Tours</a></li>
+      <li><a href="#why"          data-i18n="nav-why">Why Us</a></li>
+      <li><a href="#how"          data-i18n="nav-how">How It Works</a></li>
+      <li><a href="#testimonials" data-i18n="nav-reviews">Reviews</a></li>
+    </ul>
+  </nav>
+  <div class="footer-copy" data-i18n="footer-copy">
+    © 2026 VeloEurope. All rights reserved. Made with ❤️ for cyclists everywhere.
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu   = document.getElementById('nav-menu');
+  hamburger.addEventListener('click', () => navMenu.classList.toggle('open'));
+  navMenu.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navMenu.classList.remove('open'))
+  );
+</script>
+
+</body>
+</html>
